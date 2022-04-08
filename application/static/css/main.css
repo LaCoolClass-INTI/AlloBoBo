@@ -1,10 +1,13 @@
 body {background-color:#f7f1ed; }
 
 h1 {font-family: 'Pacifico';font-size: 36px; }
-.box {background-color:#fc71b5; border:solid; border-color:#8B008B; border-width: 2px; }
+.box {background-color:#719dfc; border:solid; border-color:#8B008B; border-width: 2px; }
 img { width : 70px; height : 70px; }
+
 .img1 {position:absolute; top: 10%; }
 .img2 {position:absolute; right: 0px; top: 10%; }
+
+
 .button1 {background-color:#a5e22c; border:solid; border-color:#006400; border-width: 2px; right: 0px ; position :absolute ; }
 .barre1 { width : 350px; height : 40px; }
 .barre2 { width : 300px; height : 40px; }
@@ -197,4 +200,19 @@ a {
   /* The height is 400 pixels */
   width: 100%;
   /* The width is the width of the web page */
+}
+
+
+/*Pour la page BigData :*/
+.box40 { 
+  border-radius: 30px;
+  padding-left: 20%; 
+  padding-right: 20%; 
+  background-color: #129e68; 
+  border: solid; 
+  border-color:#693a24b0; 
+  border-width: 2px; 
+  float:left; 
+  position: absolute; 
+  left:40px;
 }
