@@ -1,12 +1,10 @@
-from email.message import Message
 from pydoc import doc
 from application import app
 from flask import render_template, redirect, url_for, request
 from application import db
 from bson.objectid import ObjectId
 from flask_mail import Mail, Message
-from config import Config
-mail = Mail(app)
+
 
 @app.route("/")
 def index():
@@ -108,10 +106,12 @@ def cdtgeneral():
 
 @app.route('/send')
 def send():
-    msg = Message('contact.html', 
-                recipients=['lacoolclass@gmail.com'])
-    msg.body = ""
-    msg.html = ""
 
-    mail.send = (msg)
-    return "Message envoyé !"
+    msg = Message('sujet', 
+                sender = request.form.get('email'),
+                recipients=['lacoolclass@gmail.com'])
+    msg.body = 'message'
+    msg.html = 'nom "<br/>" addmail "<br/>" msag'
+
+    Mail.send = (msg)
+    return render_template('Contact.html')
