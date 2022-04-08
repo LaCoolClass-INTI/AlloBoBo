@@ -43,6 +43,13 @@ def search_remede():
     return render_template("annuaireRemede.html", remedes = remedes, symptome = symptome)
 
 
+@app.route('/send', methods=['POST', 'GET'])
+def send():
+    error = None
+    msg = Message()
+
+
+
 # BETA DU SITE
 
 
