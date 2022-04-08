@@ -1,0 +1,200 @@
+body {background-color:#f7f1ed; }
+
+h1 {font-family: 'Pacifico';font-size: 36px; }
+.box {background-color:#fc71b5; border:solid; border-color:#8B008B; border-width: 2px; }
+img { width : 70px; height : 70px; }
+.img1 {position:absolute; top: 10%; }
+.img2 {position:absolute; right: 0px; top: 10%; }
+.button1 {background-color:#a5e22c; border:solid; border-color:#006400; border-width: 2px; right: 0px ; position :absolute ; }
+.barre1 { width : 350px; height : 40px; }
+.barre2 { width : 300px; height : 40px; }
+.barre3 { width : 300px; height : 40px; }
+.image3 { width : 300px; height : 200px; position: absolute;  left: 450px;  }
+.legimg3 {position:absolute; left: 500px; top: 700px; }
+.image4 { width : 300px; height : 200px; position: absolute;  left: 800px; }
+.legimg4 {position:absolute; left: 850px; top: 700px; }
+.image5 { width : 300px; height : 200px; position: absolute;  right: 450px; }
+.legimg5 {position:absolute; right: 475px; top: 700px; }
+.unstyled-button {
+    border: none;
+    padding: 0;
+    background: none;
+    padding-right: 10px ;
+    padding-left: 10px ;
+  }
+.img6 { width : 30px; height : 30px}
+.img7 { width : 30px; height : 30px}
+.img8 { width : 30px; height : 30px}
+.img9 { width : 30px; height : 30px}
+.box1 {background-color:#fc71b5; border:solid; border-color:#8B008B; border-width: 2px; }
+.img1-1 {position:absolute; top: 5px; }
+.img2-1 {position:absolute; right: 0px; top: 5px; }
+
+.box3 { 
+  border-radius: 30px;
+  padding-left: 10px; 
+  padding-right: 10px; 
+  background-color: #129e68; 
+  border: solid; 
+  border-color:#693a24b0; 
+  border-width: 2px; 
+  float:left; 
+  position: absolute; 
+  left:40px;
+}
+.box2 { 
+  border-radius: 30px;
+  padding-left: 10px; 
+  padding-right: 10px; 
+  background-color: #a5e22c; 
+  border: solid; 
+  border-color:#d1ac8a6c; 
+  border-width: 2px; 
+  float: right; 
+  position: absolute; 
+  right: 40px;
+}
+h3 {
+  font-family: 'Pacifico';
+  font-size: 15px;
+ }
+.container { 
+  width: 1000px; 
+  height: 500px;
+  margin: 0 auto;
+}
+.box3-1 {
+  padding-left: 10px; 
+  padding-right: 10px; 
+  background-color: #f5f5f5; 
+  border: solid; 
+  border-color:#759e59;
+}
+.box2-1 {
+  padding-left: 10px; 
+  padding-right: 10px; 
+  background-color: #f5f5f5; 
+  border: solid; 
+  border-color:#759e59;
+}
+.box3-2 {
+  padding-left: 10px; 
+  padding-right: 10px; 
+  padding-top: 10px; 
+  background-color: #f5f5f5; 
+  border: solid; 
+  border-color:#759e59;
+}
+.box2-2 {
+  padding-left: 10px; 
+  padding-right: 10px;
+  padding-top: 10px; 
+  background-color: #f5f5f5; 
+  border: solid; 
+  border-color:#759e59;
+}
+.login {
+  background-color: #c0af12f6; 
+  border-radius: 30px;
+}
+.mdp{
+  font-family: Comic Sans MS;
+}
+a {
+  color: #000000;
+}
+.inscription {
+  background-color: #c0af12f6; 
+  border-radius: 30px;
+}
+.contact { 
+  font-family: Didot; 
+  font-weight: bold;
+  font-size: 40px;
+}
+.box4  {
+  border-radius: 30px; 
+  padding-left: 10px; 
+  padding-right: 10px; 
+  background-color: #fc71b5; 
+  border: solid; 
+  border-color:#8B008B;width:500px; 
+  height: 200px;
+ }
+.img11 {
+  position:absolute; 
+  top: 100px;
+ }
+.img22 {
+  position:absolute;
+  right: 0px; 
+  top: 100px;
+ }
+.box31 { 
+  border-radius: 30px;
+  padding-left: 10px; 
+  padding-right: 10px; 
+  background-color: #129e68; 
+  border: solid; 
+  border-color:#693a24b0; 
+  border-width: 2px;  
+  display: table;
+  position: absolute;
+  left: 30%;
+  right: 30%;
+  height: 30%;
+  display: table-cell;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+} 
+.fp {
+  color: #000000;
+  font-family: 'pacifico';
+  font-weight: lighter;
+
+}
+.sexe {
+  color:#000000
+}
+.day {
+  display: flex;
+}
+
+.boxdocteur {
+  border-radius: 30px;
+  background-color: #ecf0ee; 
+  border: solid; 
+  border-color:#030100b0; 
+  border-width: 2px;  
+  display: table;
+  position: absolute;
+  left: 15%;
+  right: 70%;
+  height: 30%;
+  width: 400px;
+}
+
+.boxinfos{
+  border-radius: 30px;
+  background-color: #ecf0ee; 
+  border: solid; 
+  border-color:#030100b0; 
+  border-width: 2px;  
+  display: table;
+  position: absolute;
+  left: 60%;
+  right: 15%;
+  height: 30%;
+  width: 400px;
+}
+
+
+/* Set the size of the div element that contains the map */
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}

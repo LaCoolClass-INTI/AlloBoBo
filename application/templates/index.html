@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<!-- Barre de recherche Spécialité/Docteur-->
+	<center>
+		<form action="{{ url_for('search_spe') }}" method="POST" role="form">
+			<div class="form-group">
+				<div class="input-group">
+					<input name="search-doc" type="text" class="barre1" placeholder="Vous cherchez un docteur ? Entrez une spécialité... ">
+					<span class="input-group-btn">
+						<!--ButtonGo-->
+						<button type="submit" class="button is-primary is-rounded" id="search-btn">GO</button>
+					</span>
+				</div>
+			</div>
+		</form>
+	</center>
+	<br />
+	<!-- Barre de recherche Symptome/Remède -->
+	<center>
+		<form action="{{ url_for('search_remede') }}" method="POST" role="form">
+			<div class="form-group">
+				<div class="input-group">
+					<input name="search-remede" type="text" class="barre1" placeholder="Vous cherchez un remède ? Entrez un symptôme... ">
+					<span class="input-group-btn">
+						<!--ButtonGo-->
+						<button type="submit" class="button is-primary is-rounded" id="search-btn">GO</button>
+					</span>
+				</div>
+			</div>
+		</form>
+	
+	</center>
+	
+
+	<!-- lien ancré image + legende (figcaption)-->
+	
+	<br />
+	<br />
+	<br />
+	
+	<a href="/page essential"><img class="image3" src="{{ url_for('static', filename='image/essential.jpeg') }}"  alt="essential" /></a> <figcaption class="legimg3">Démarrer un bilan de santé</figcaption> 
+	<a href="/page pharmacy"><img class="image4" src="{{ url_for('static', filename='image/pharmacy.jpeg') }}"  alt="pharmacy" /></a><figcaption class="legimg4">Top 10 des symptômes</figcaption> 
+	<a href="/page docteur"><img class="image5" src="{{ url_for('static', filename='image/docteur.jpeg') }}"  alt="docteur" /></a><figcaption class="legimg5" >Big Data au service de la médecine</figcaption> 
+
+		
+       
+	
+	<br />
+	<br />
+	<br />
+	<br />
+    <br />
+	<br />
+	<br />
+	<br />
+	<br />
+    <br />
+	<br />
+	<br />
+	<br />
+	<br />
+    <br />
+
+	{% endblock %}

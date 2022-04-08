@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+<!-- Informations sur le docteur -->			
+
+<div class="boxdocteur">
+		 				
+	<center><h3><b>Professionel de santé</b></h3>
+	</br>
+			<label>Genre: 0</label>
+			<br/>
+			<label>Nom: {{ docteur.Nom }}</label>
+			<br/>
+			<label>Prénom: {{ docteur.Prenom }}</label>
+			<br/>
+			<label>Adresse: {{ docteur.Adresse}} </label>
+			<br/>
+			<label>Ville: {{docteur.Ville }}</label>
+			<br/>
+			<label>Code Postal: {{ docteur.CodePostale }}</label>
+			<br/>
+			<label>Date de Naissance : {{docteur.DateNaissance}}</label>
+			<br/>
+			<label>Email: {{docteur.Email}}</label>
+			<br/>
+			<label>Téléphone: {{docteur.Telephone}}</label>
+			<br/>
+			<label>Spécialité: {{docteur.Specialite}}</label>
+			
+	</center>
+
+</div>
+
+<br/>
+
+<div class="boxinfos">
+	<Br/>
+	<!-- Ajout de la carte interactive -->
+	<div id="map" style="width:600px; height: 400px;"></div>
+
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+	<script>
+		var map_parameters = { center: {lat: {{docteur.Latitude}}, lng: {{docteur.Longitude}}}, zoom: 17 };
+		var map = new google.maps.Map(document.getElementById('map'), map_parameters);
+
+		var position1 = { position: {lat: {{docteur.Latitude}}, lng: {{docteur.Longitude}}}, map: map };
+
+		var marker1 = new google.maps.Marker(position1);
+		
+	</script>
+	<Br/>
+</div>
+
+
+
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+<Br/>
+
+
+{% endblock %}

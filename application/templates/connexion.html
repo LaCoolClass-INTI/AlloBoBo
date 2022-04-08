@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- zone de connexion -->
+
+    <!--Colonnes-->
+   
+    <div class="block">
+        <div class="container">
+        
+                <div class="box3">
+             
+                    <form action="verification.php" method="POST">
+			
+                        <center><h2>Je suis: UN PARTICULIER </h2></center>
+                        </br>
+                            <div class="box3-1">
+                               <center><h3>J'ai déjà un compte AlloBobo</h3></center> 
+                                </br>
+                                <label><b>Nom d'utilisateur</b></label>
+                                <input type="email" placeholder="" name="username" required>
+                                <br/>
+                                </br>
+                                <label><b>Mot de passe</b></label>
+                                <input type="password" placeholder="" name="password" required>
+                                <br/>
+                                </br>
+                                <center><input class="login" type="submit" id='submit' value='Se Connecter' ></center>
+                                <br/>
+                                <center><text type="submit" class="mdp"> <a href="/Mot-de-passe-oublié">Mot de passe oublié ?</a> </text></center>
+                                <br/>
+                             </div>
+                             </br>
+                             <div class="box3-2">
+                                <center><h3>Bienvenue sur AlloBobo !</h3></center> 
+                                </br>
+                                <center><button class="inscription" type="submit"> <a href="/Inscription">S'inscrire</a> </button></center>
+                                <br/>
+                            </div>
+                            <br/>
+                    </form>
+                </div>
+                
+
+
+                <div class="box2">
+              
+               
+                    
+                    <form action="verification.php" method="POST">
+			
+                    <center><h2>Je suis: UN PROFESSIONEL</h2></center>
+                    </br>
+                        <div class="box2-1">
+                            <center><h3>J'ai déjà un compte AlloBobo</h3></center>
+                            </br>
+                            <label><b>Nom d'utilisateur</b></label>
+                            <input type="email" placeholder="" name="username" required>
+                            <br/>
+                            </br>
+                            <label><b>Mot de passe</b></label>
+                            <input type="password" placeholder="" name="password" required>
+                            <br/>
+                            </br>
+                            <center><input class="login" type="submit" id='submit' value='Se connecter' ></center>
+                            <br/>
+                            <center><text type="submit" class="mdp"> <a href="/Mot-de-passe-(Professionel de Santé)">Mot de passe oublié ?</a> </text></center>
+                            <br/>
+                        </div>
+                        </br>
+                        <div class="box2-2">
+                            <center><h3>Bienvenue sur AlloBobo !</h3></center> 
+                            </br>
+                            <center><button class="inscription" type="submit"> <a href="/Inscription">S'inscrire</a> </button> </center>
+                            <br/>
+                        </div>
+                        <br/>
+                    </form>
+                </div>
+                
+		
+		
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+ 
+
+
+{% endblock %}

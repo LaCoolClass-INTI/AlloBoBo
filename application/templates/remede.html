@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+		<div class="container-fluid" id="wrapper">
+			
+			<div class="row">
+				<div class="col-lg-4 col-lg-offset-4" id="content">
+					<h2>VOUS ETES SUR LA PAGE DU REMEDE : </h2>
+					
+					<br>Nom : {{ remede.Remede }}
+
+					<br>Type de remede : {{remede.type_de_remede}}
+
+					<br>posologie : {{remede.posologie}}
+
+					<br>Durée : {{remede.Duree}}
+
+
+
+					<br>Symptome(s) traité(s) :
+					
+					<br>
+
+					{% for symptome in remede.Symptome %}
+					<br>- {{ symptome }}
+					{% endfor %}
+					
+					
+				</div>
+			</div>
+		</body>
+
+
+
+
+{% endblock %}

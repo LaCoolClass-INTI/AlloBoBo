@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!--Formulaire de contact-->
+<center><div class="contactez-nous">
+    <h2 class="contact">Contactez-nous</h2>
+    <p>Un problème, une question, envie de nous envoyer un message d’amour ? N’hésitez pas à utiliser ce formulaire pour prendre contact avec nous !</p>
+    <form action="/page-traitement-donnees" method="post">
+  </div>
+  
+  <div class="box4">
+  <div>
+    <label for="nom"><b> Votre nom</label></b>
+    <input type="text" id="nom" name="nom" placeholder="Martin" required>
+  </div>
+  
+  <div>
+    <label for="email"><b>Votre e-mail</label></b>
+    <input type="email" id="email" name="email" placeholder="monadresse@mail.com" required>
+  </div>
+  
+  <div>
+    <label for="sujet"><b>Quel est le sujet de votre message ?</label></b>
+    <select name="sujet" id="sujet" required>
+    <option value="" disabled selected hidden>Choisissez le sujet de votre message</option>
+    <option value="probleme-compte">Problème avec mon compte</option>
+    <option value="question-produit">Question à propos d’un produit</option>
+    <option value="suivi-commande">Question à propos d'un praticien ?</option>
+    <option value="autre">Autre...</option>
+    </select>
+  </div>
+    
+  <div>
+    <label for="message"><b>Votre message</label></b>
+    <br/>
+    <textarea id="message" name="message" placeholder="Bonjour, je vous contacte car...." required></textarea>
+  </div>
+    
+  <div>
+    <button type="submit">Envoyer mon message</button>
+  </div>
+  </center>
+  </form>
+  </div>
+  </div>
+  
+{% endblock %}

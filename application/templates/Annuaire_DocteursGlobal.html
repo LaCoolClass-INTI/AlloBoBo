@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+Liste des docteurs :
+
+<ul class="list-group t20">
+    {% for docteur in docteurs %} 
+    <a href="{{ url_for('infos_Docteur', oid=docteur._id)}}">
+        <li class="list-group-item">
+            {{ docteur.Nom }} {{ docteur.Prenom }} : {{docteur.Specialite}}
+        </li>
+    </a>
+    {% endfor %}
+</ul>
+
+{% endblock %}

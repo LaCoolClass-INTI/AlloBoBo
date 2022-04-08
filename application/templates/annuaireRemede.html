@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+		<div class="container-fluid" id="wrapper">
+			
+			<div class="row">
+				<div class="col-lg-4 col-lg-offset-4" id="content">
+					<h2>VOICI LES REMEDES TRAITANTS LE SYMPTOME SUIVANT : {{ symptome }}</h2>
+					
+					<ul class="list-group t20">
+						{% for remede in remedes %} 
+						<a href="{{ url_for('infos_Remede', oid=remede._id)}}">
+							<li class="list-group-item">
+								{{ remede.Remede }}
+							</li>
+						</a>
+						{% endfor %}
+					</ul>
+				</div>
+				<a href="{{ url_for('index')}}">MOTEUR DE RECHERCHE</a>
+			</div>
+
+
+{% endblock %}

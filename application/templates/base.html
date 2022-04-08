@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>AlloBobo</title> 
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+</head>
+
+<br />
+
+	<div> 
+		<button class="button1"> <a href="/Connexion">Connexion</a> 	
+	</div>  
+<br />
+<br />
+
+
+
+
+<!-- Titre 1 -->
+<center> <div class="box">
+	
+	<h1 class="title" >Bienvenue sur AlloBobo !</h1> 
+</div> </center> 
+
+<!--images_fleur-->
+
+<img class="img1" src="{{ url_for('static', filename='image/fleur_endroit.png') }}"  >
+<img class="img2" src="{{ url_for('static', filename='image/fleur_envers.png') }}" >
+
+<br />
+<br />
+
+
+<Body>
+
+<nav>
+   <!-- button -->
+	<center>
+<div class="block">
+    <button class="button is-outlined"> <a href="/">Accueil</a></button>
+    <button class="button is-outlined"> <a href="/Qui_sommes_nous">Qui nous sommes</a></button>
+	<button class="button is-outlined"> <a href="/Nos_solutions">Nos solutions</a>  </button> 	
+	<button class="button is-outlined"> <a href="/Nos offres">Nos offres</a>  </button> 
+	<button class="button is-outlined"> <a href="/FAQ">F.A.Q</a>  </button> 
+	<button class="button is-outlined"> <a href="/Contact">Contact</a>  </button>
+	<button class="button is-outlined"> <a href="/annuaire_Docteur">Annuaire</a>  </button>
+</div>
+   </center>  
+</nav>
+
+
+    <br />
+	<br />
+	<br />
+
+
+
+
+
+
+{% block content %}{% endblock %}
+	
+	
+	<br />
+    <br />
+	<br />
+
+
+
+</body>
+
+
+<Footer>
+<!--logos-->
+
+<center>  
+<div> 
+
+	<button type="submit" class="unstyled-button"> <a href="RGPD">RGPD</a> </p> </button>
+	<button type="submit" class="unstyled-button"> <a href="/A_propos_de_AlloBobo">À propos de AlloBobo</a> </p> </button>
+	<button type="submit" class="unstyled-button"> <a href="/professionnels_de_sante">Pour les professionnels de santé</a> </p> </button> 
+	<button type="submit" class="unstyled-button"> <a href="/Condition_utilisation">Condition générale d'utilisation </p> </button>
+	
+</div>
+</center> 
+
+<br />
+
+
+<center>  
+<div class="block"> 
+<a href="https://www.instagram.com/%22%22%3E"><img class="img6" src="{{ url_for('static', filename='image/insta.jpeg') }}" alt="insta"></a>
+<a href="https://www.facebook.com/%22%22%3E"><img class="img7" src="{{ url_for('static', filename='image/facebook.jpg') }}" alt="facebook"></a>
+<a href="https://fr.linkedin.com/%22%22%3E"><img class="img8" src="{{ url_for('static', filename='image/linkedin.jpeg') }}" alt="linkedin"></a>
+<a href="https://fr.linkedin.com/%22%22%3E"><img class="img9" src="{{ url_for('static', filename='image/Twitter.png') }}" alt="Twitter"></a>       
+</div>
+</center>
+
+
+</Footer>
+</html>
