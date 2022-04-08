@@ -193,6 +193,9 @@ a {
   width: 400px;
 }
 
+.brd {
+ border: 3px solid black;}
+
 
 /* Set the size of the div element that contains the map */
 #map {
