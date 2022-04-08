@@ -1,12 +1,10 @@
 body {background-color:#f7f1ed; }
 
 h1 {font-family: 'Pacifico';font-size: 36px; }
-.box {background-color:#719dfc; border:solid; border-color:#8B008B; border-width: 2px; }
+.box {background-color:#f09014; border:solid; border-color:#8B008B; border-width: 2px; }
 img { width : 70px; height : 70px; }
-
 .img1 {position:absolute; top: 10%; }
 .img2 {position:absolute; right: 0px; top: 10%; }
-
 
 .button1 {background-color:#a5e22c; border:solid; border-color:#006400; border-width: 2px; right: 0px ; position :absolute ; }
 .barre1 { width : 350px; height : 40px; }
