@@ -101,3 +101,7 @@ def pro():
 @app.route('/Condition_utilisation', methods=['POST', 'GET'])
 def cdtgeneral():
     return render_template('CGU.html') 
+
+@app.route('/page bigdata', methods=['POST', 'GET'])
+def bigdata():
+    return render_template('page_BigData.html')  
