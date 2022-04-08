@@ -42,6 +42,11 @@ def search_remede():
     remedes = RemedeDB.find({"Symptome": symptome})
     return render_template("annuaireRemede.html", remedes = remedes, symptome = symptome)
 
+@app.route('/Nos offres', methods=['POST', 'GET'])
+def nosOffres():
+    RemedeDB = db.Remedes
+    remedes = RemedeDB.find({})
+    return render_template("Nos offres.html", remedes = remedes)
 
 @app.route('/send', methods=['POST', 'GET'])
 def send():
@@ -69,9 +74,7 @@ def faq():
 def nosSolutions():
     return render_template('Nos solutions.html')    
 
-@app.route('/Nos offres', methods=['POST', 'GET'])
-def nosOffres():
-    return render_template('Nos offres.html')
+
 
 @app.route('/page docteur', methods=['POST', 'GET'])
 def docteur():
