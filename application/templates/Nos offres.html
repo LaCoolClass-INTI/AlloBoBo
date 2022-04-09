@@ -11,14 +11,12 @@ Nos Offres
             
             <ul class="list-group t20">
                 {% for remede in remedes %} 
-                <a href="{{ url_for('infos_Remede', oid=remede._id)}}">
                     <li class="list-group-item">
-                        {{ remede.Remede }} :
+                        <a href="{{ url_for('infos_Remede', oid=remede._id)}}">{{remede.Remede}}</a> :
                         {% for symptome in remede.Symptome %}  
                         {{ symptome }},
                         {% endfor %}
                     </li>
-                </a>
                 {% endfor %}
             </ul>
         </div>

@@ -48,10 +48,7 @@ def nosOffres():
     remedes = RemedeDB.find({})
     return render_template("Nos offres.html", remedes = remedes)
 
-@app.route('/send', methods=['POST', 'GET'])
-def send():
-    error = None
-    msg = Message()
+
 
 
 
