@@ -6,7 +6,7 @@
 <center><div class="contactez-nous">
     <h2 class="contact">Contactez-nous</h2>
     <p>Un problème, une question, envie de nous envoyer un message d’amour ? N’hésitez pas à utiliser ce formulaire pour prendre contact avec nous !</p>
-    <form action="send" method="post">
+    <form action="{{ url_for('send') }}" method="POST" role="form">
   </div>
   
   <div class="box4">
@@ -38,7 +38,7 @@
   </div>
     
   <div>
-    <button type="submit">Envoyer mon message</button>
+    <button type="submit" class="button is-primary is-rounded" id="search-btn">Envoyer mon message</button>
   </div>
   </center>
   </form>

@@ -104,14 +104,14 @@ def pro():
 def cdtgeneral():
     return render_template('CGU.html') 
 
-@app.route('/send')
+@app.route('/send', methods={"POST"})
 def send():
 
-    msg = Message('sujet', 
-                sender = request.form.get('email'),
-                recipients=['lacoolclass@gmail.com'])
+    msg = Message('sujet',
+                sender = "from@exemple.com",
+                recipients=['adrien.saliou.lyon@gmail.com'])
     msg.body = 'message'
     msg.html = 'nom "<br/>" addmail "<br/>" msag'
 
     Mail.send = (msg)
-    return render_template('Contact.html')
+    return 'Message envoyé'

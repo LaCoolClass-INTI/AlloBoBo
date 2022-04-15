@@ -1,5 +1,5 @@
 class Config :
-    MAIL_SERVER = 'smtp-relay.gmail.com'
+    MAIL_SERVER = 'aspmx.l.google.com'
     MAIL_PORT =  25
     MAIL_USE_TLS = False
     MAIL_USE_SSL = False
