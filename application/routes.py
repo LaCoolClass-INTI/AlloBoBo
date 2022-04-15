@@ -112,9 +112,11 @@ def inscription():
 @app.route("/infos_Docteur/<oid>")
 def infos_Docteur(oid):
     if 'email' in session:
+        email = session['email']
+        user = db.session.find_one({'email': email})
         docteursDB = db.Docteurs
         docteur = docteursDB.find_one({'_id': ObjectId(oid)})
-        return render_template("page_docteur.html", docteur = docteur)
+        return render_template("page_docteur.html", docteur = docteur, user=user)
     else:
         return render_template("connexion.html")
 
@@ -122,39 +124,60 @@ def infos_Docteur(oid):
 @app.route("/annuaire_Docteur")
 def annuaire_Docteur():
     if 'email' in session:
+        email = session['email']
+        user = db.session.find_one({'email': email})
         docteursDB = db.Docteurs
         docteurs = docteursDB.find({})
-        return render_template("Annuaire_DocteursGlobal.html", docteurs = docteurs)
+        return render_template("Annuaire_DocteursGlobal.html", docteurs = docteurs, user=user)
     else:
        return render_template("connexion.html") 
 
 
 @app.route("/infos_Remede/<oid>")
 def infos_Remede(oid):
-    RemedeDB = db.Remedes
-    remede = RemedeDB.find_one({'_id': ObjectId(oid)})
-    return render_template("remede.html", remede = remede)
+    if 'email' in session:
+        email = session['email']
+        user = db.session.find_one({'email': email})
+        RemedeDB = db.Remedes
+        remede = RemedeDB.find_one({'_id': ObjectId(oid)})
+        return render_template("remede.html", remede = remede, user=user)
+    else:
+       return render_template("connexion.html") 
 
 @app.route("/AnnuaireDocteur", methods={"POST"})
 def search_spe():
-    speciality = request.form.get('search-doc')
-    docteursDB = db.Docteurs
-    docteurs = docteursDB.find({'Specialite': speciality})
-    return render_template("annuaireDocteur.html", docteurs = docteurs, speciality = speciality)
+    if 'email' in session:
+        email = session['email']
+        user = db.session.find_one({'email': email})
+        speciality = request.form.get('search-doc')
+        docteursDB = db.Docteurs
+        docteurs = docteursDB.find({'Specialite': speciality})
+        return render_template("annuaireDocteur.html", docteurs = docteurs, speciality = speciality, user=user)
+    else:
+       return render_template("connexion.html")
 
 @app.route("/AnnuaireRemede", methods={"POST"})
 def search_remede():
-    symptome = request.form.get('search-remede')
-    RemedeDB = db.Remedes
-    remedes = RemedeDB.find({"Symptome": symptome})
-    return render_template("annuaireRemede.html", remedes = remedes, symptome = symptome)
+    if 'email' in session:
+        email = session['email']
+        user = db.session.find_one({'email': email})
+        symptome = request.form.get('search-remede')
+        RemedeDB = db.Remedes
+        remedes = RemedeDB.find({"Symptome": symptome})
+        return render_template("annuaireRemede.html", remedes = remedes, symptome = symptome, user=user)
+    else:
+       return render_template("connexion.html")
 
 @app.route('/Nos offres', methods=['POST', 'GET'])
 def nosOffres():
-    RemedeDB = db.Remedes
-    remedes = RemedeDB.find({})
-    return render_template("Nos offres.html", remedes = remedes)
-
+    if 'email' in session:
+        email = session['email']
+        user = db.session.find_one({'email': email})
+        RemedeDB = db.Remedes
+        remedes = RemedeDB.find({})
+        return render_template("Nos offres.html", remedes = remedes, user=user)
+    else:
+       return render_template("connexion.html")
 
 
 
@@ -214,4 +237,5 @@ def cdtgeneral():
 
 @app.route('/page bigdata', methods=['POST', 'GET'])
 def bigdata():
-    return render_template('page_BigData.html')  
+    page = "page_BigData.html"
+    return redirect(url_for('redirection', page=page))
