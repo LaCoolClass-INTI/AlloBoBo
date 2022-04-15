@@ -23,7 +23,7 @@ def logout():
         session.pop("email", None)
         return render_template("connexion.html")
     else:
-        return render_template('index.html')
+        return render_template('connexion.html')
 
 @app.route("/index")
 def index():
@@ -92,6 +92,11 @@ def inscription():
     if request.method == "POST":
         user = request.form.get("pseudo")
         email = request.form.get("email")
+        nom = request.form.get("nom")
+        prenom = request.form.get("prenom")
+        tel = request.form.get("tel")
+        type = request.form.get("type")
+        sexe = request.form.get("sexe")
         
         password1 = request.form.get("password1")
         password2 = request.form.get("password2")
@@ -111,13 +116,14 @@ def inscription():
             return render_template('inscription.html', message=message)
         else:
             hashed = bcrypt.hashpw(password2.encode('utf-8'), bcrypt.gensalt())
-            user_input = {'pseudo': user, 'email': email, 'password': hashed}
+            user_input = {'pseudo': user, 'nom': nom, 'prenom': prenom, 'email': email, 'tel': tel, 'type': type, 'sexe': sexe, 'password': hashed}
             dbSession.insert_one(user_input)
             
             user_data = dbSession.find_one({"email": email})
             new_email = user_data['email']
-   
-            return render_template('index.html', email=new_email)
+            session["email"] = new_email
+            return redirect(url_for('index'))
+            
     return render_template('inscription.html')   
 
 @app.route("/infos_Docteur/<oid>")
@@ -250,6 +256,17 @@ def cdtgeneral():
 def bigdata():
     page = "page_BigData.html"
     return redirect(url_for('redirection', page=page))
+
+
+@app.route('/page essential', methods=['POST', 'GET'])
+def essential():
+    page = "page essential.html"
+    return redirect(url_for('redirection', page=page))
+
+@app.route('/page pharmacy', methods=['POST', 'GET'])
+def pharmacy():
+    page = "page pharmacy.html"
+    return redirect(url_for('redirection', page=page))        
 
 @app.route('/send', methods=['POST', 'GET'])
 def send():

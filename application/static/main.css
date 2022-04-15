@@ -30,9 +30,9 @@ img { width : 100px; height : 100px; }
 .image4 { width : 300px; height : 200px; position: absolute;  left: 45%; }
 .image5 { width : 300px; height : 200px; position: absolute;  left: 70%; }
     /*#Legende des trois images*/
-.legimg3 {position:absolute; left: 23%; top: 70%; }
-.legimg4 {position:absolute; left: 49%; top: 70%; }
-.legimg5 {position:absolute; left: 72%; top: 70%; }
+.legimg3 {position:absolute; left: 23%; top: 72%; }
+.legimg4 {position:absolute; left: 49%; top: 72%; }
+.legimg5 {position:absolute; left: 72%; top: 72%; }
 
 
     /*#Pour les images de résaux sociaux*/
@@ -45,7 +45,7 @@ img { width : 100px; height : 100px; }
 .box {background-color:#fc71b5; border:solid; border-color:#8B008B; border-width: 2px; border-radius: 40px;}
 .box1 {background-color:#fc71b5; border:solid; border-color:#8B008B; border-width: 2px; }
   /*#Pour Page Connexion*/
-    /*#Je suis: UN PARTICULIER*/
+    /*#Je suis: Je me connecte*/
 .box3 { 
   border-radius: 30px;
   padding-left: 10px; 
@@ -56,7 +56,7 @@ img { width : 100px; height : 100px; }
   border-width: 2px; 
   float:left; 
   position: absolute; 
-  left:25%;
+  left: 41%;
 }
 .box3-1 {
   padding-left: 10px; 
@@ -68,34 +68,6 @@ img { width : 100px; height : 100px; }
 .box3-2 {
   padding-left: 10px; 
   padding-right: 10px; 
-  padding-top: 10px; 
-  background-color: #f5f5f5; 
-  border: solid; 
-  border-color:#759e59;
-}
-    /*#Je suis: UN PROFESSIONEL*/
-.box2 { 
-  border-radius: 30px;
-  padding-left: 10px; 
-  padding-right: 10px; 
-  background-color: #a5e22c; 
-  border: solid; 
-  border-color:#d1ac8a6c; 
-  border-width: 2px; 
-  float: right; 
-  position: absolute; 
-  right: 25%;
-}
-.box2-1 {
-  padding-left: 10px; 
-  padding-right: 10px; 
-  background-color: #f5f5f5; 
-  border: solid; 
-  border-color:#759e59;
-}
-.box2-2 {
-  padding-left: 10px; 
-  padding-right: 10px;
   padding-top: 10px; 
   background-color: #f5f5f5; 
   border: solid; 
@@ -167,7 +139,9 @@ img { width : 100px; height : 100px; }
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   border-radius: 25px;
   transition-duration: 0.4s;
+  font-size: 20px;
 }
+
 .button1:hover {
   background-color: #00af00;
   color: white;
@@ -242,6 +216,10 @@ a {
   color: #000000;
 }
 
+a.notUnderlined {
+  text-decoration: none;
+}
+
 .contact { 
   font-family: Didot; 
   font-weight: bold;
@@ -273,3 +251,17 @@ a {
   /* The height is 400 pixels */
   width: 100%;
   /* The width is the width of the web page */
+}
+
+.User {
+  background-color:#ee6d6d; 
+  padding-right: 10px ;
+  padding-left: 10px ;
+  border:solid; 
+  border-color:#720745; 
+  border-width: 2px; 
+  position :absolute ;
+  border-radius: 15px;
+  font-size: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+ }

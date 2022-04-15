@@ -2,14 +2,16 @@
 
 {% block content %}
 
-
+<div class = "box40">
 
 		<div class="container-fluid" id="wrapper">
-			
+			<center>
 			<div class="row">
 				<div class="col-lg-4 col-lg-offset-4" id="content">
-					<h2>VOICI LES REMEDES TRAITANTS LE SYMPTOME SUIVANT : {{ symptome }}</h2>
-					
+					<h1>Les remèdes traitants votre problème : </h1>
+				</center>
+					<center>
+					<h2>{{ symptome }}</h2>
 					<ul class="list-group t20">
 						{% for remede in remedes %} 
 						<a href="{{ url_for('infos_Remede', oid=remede._id)}}">
@@ -19,9 +21,17 @@
 						</a>
 						{% endfor %}
 					</ul>
+				</center>
+<br>
+<br>
+
 				</div>
+				<center>
 				<a href="{{ url_for('index')}}">MOTEUR DE RECHERCHE</a>
+			</center>
+{% endblock %}
 			</div>
 
 
-{% endblock %}
+
+</div>
