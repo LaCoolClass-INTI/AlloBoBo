@@ -271,6 +271,32 @@ a {
   width: 100%;
   /* The width is the width of the web page */
 }
+.boxinfos{
+  border-radius: 30px;
+  background-color: #ecf0ee; 
+  border: solid; 
+  border-color:#030100b0; 
+  border-width: 2px;
+  display: table;
+  position: absolute;
+  left: 60%;
+  right: 15%;
+  height: 30%;
+  width: 400px;
+}
+.boxdocteur {
+  border-radius: 30px;
+  background-color: #ecf0ee; 
+  border: solid; 
+  border-color:#030100b0; 
+  border-width: 2px;
+  display: table;
+  position: absolute;
+  left: 15%;
+  right: 70%;
+  height: 30%;
+  width: 400px;
+}
 
 
 
