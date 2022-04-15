@@ -201,3 +201,15 @@ a {
   width: 100%;
   /* The width is the width of the web page */
 }
+
+
+/*Pour la page BigData :*/
+.box40 { 
+  border-radius: 30px;
+  padding-left: 20%; 
+  padding-right: 20%; 
+  background-color: #f7f1ed;
+  float:left; 
+  position: absolute; 
+  left:40px;
+}
