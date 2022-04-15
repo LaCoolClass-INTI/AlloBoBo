@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-Nos Offres
-
+<font size="4">
+<div class = "box40">
 <div class="container-fluid" id="wrapper">
 			
     <div class="row">
         <div class="col-lg-4 col-lg-offset-4" id="content">
-            <h2>Voici nos offres proposées : </h2>
+            <center><h1>Voici nos offres proposées : </h1></center>
             
             <ul class="list-group t20">
                 {% for remede in remedes %} 
@@ -20,9 +20,10 @@ Nos Offres
                 {% endfor %}
             </ul>
         </div>
-        <a href="{{ url_for('index')}}">MOTEUR DE RECHERCHE</a>
+       
     </div>
 
 
-
+</font>
 {% endblock %}
+</div>
