@@ -13,6 +13,7 @@ app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 app.config['MAIL_USERNAME'] = 'lacoolclass@gmail.com'
 app.config['MAIL_PASSWORD'] = 'intijee-16'
+app.config['MAIL_DEFAULT_SENDER'] = None
 
 mail = Mail(app)
 
@@ -249,11 +250,20 @@ def cdtgeneral():
 def bigdata():
     page = "page_BigData.html"
     return redirect(url_for('redirection', page=page))
+
 @app.route('/send', methods=['POST', 'GET'])
 def send():
-    msg = Message('Sujet 1',
-        sender = 'mec.cheloudufinfonddelariege@gmail.com',
-        recipients=['lacoolclass@gmail.com'])
-    mail.send(msg)
+    if request.method == "POST":
+        leNom = request.form['nom']
+        lemail = request.form['email']
+        sujet = request.form['sujet']
+        message = request.form['message']
 
-    return 'Message envoyé'
+        msg = Message(sujet,
+            sender = lemail,
+            recipients=['lacoolclass@gmail.com'])
+
+        msg.body = message + " . Message de la part de : " + leNom + ", Mail : " + lemail
+        mail.send(msg)
+
+    return render_template("Merci.html")
