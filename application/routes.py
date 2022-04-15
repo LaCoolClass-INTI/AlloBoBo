@@ -6,6 +6,16 @@ from bson.objectid import ObjectId
 from flask_mail import Mail, Message
 
 
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+app.config['MAIL_USERNAME'] = 'lacoolclass@gmail.com'
+app.config['MAIL_PASSWORD'] = 'intijee-16'
+
+mail = Mail(app)
+
+
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -77,7 +87,7 @@ def essential():
     return render_template('page essential.html')
 
 @app.route('/page pharmacy', methods=['POST', 'GET'])
-def pharmacy():
+def pharmacy(): 
     return render_template('page pharmacy.html')  
 
 @app.route('/RGPD', methods=['POST', 'GET'])
@@ -104,14 +114,12 @@ def pro():
 def cdtgeneral():
     return render_template('CGU.html') 
 
-@app.route('/send', methods={"POST"})
+@app.route('/send', methods=['POST', 'GET'])
 def send():
+#    if request.method == "POST":
 
-    msg = Message('sujet',
-                sender = "from@exemple.com",
-                recipients=['adrien.saliou.lyon@gmail.com'])
-    msg.body = 'message'
-    msg.html = 'nom "<br/>" addmail "<br/>" msag'
+    msg = Message('sujet', sender="trucnull.ouaismaisnon@gmail.com", recipients=['lacoolclass@gmail.com'])
+    msg.body = "message"
 
-    Mail.send = (msg)
+    mail.send(msg)
     return 'Message envoyé'
