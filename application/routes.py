@@ -255,6 +255,17 @@ def cdtgeneral():
 def bigdata():
     page = "page_BigData.html"
     return redirect(url_for('redirection', page=page))
+
+@app.route('/page essential', methods=['POST', 'GET'])
+def essential():
+    page = "page essential.html"
+    return redirect(url_for('redirection', page=page))
+
+@app.route('/page pharmacy', methods=['POST', 'GET'])
+def pharmacy():
+    page = "page pharmacy.html"
+    return redirect(url_for('redirection', page=page))        
+
 @app.route('/send', methods=['POST', 'GET'])
 def send():
     msg = Message('Sujet 1',
