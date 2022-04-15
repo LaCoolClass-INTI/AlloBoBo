@@ -4,26 +4,31 @@
 
 
 
-	
+	<form action="{{ url_for('inscription') }}" method="POST">
 	<div class="box31">
 
 	
 			<center><b><legend class="fp">Formulaire d'inscription</legend></b></center>
 			<!-- La balise Table pour formater l'affichage du formulaire -->
-			<br>
 			<center><table>
+
+				<tr>
+					<td><b><label>Nom d'utilisateur*</label></b></td>
+					<td><input name="pseudo" type="text" placeholder="saisir votre pseudo"/></td>
+					
+				</tr>
 				<tr>
 					
 				
-					<td><b><label>Nom</label></b></td>
-					<td><input type="text" placeholder="saisir votre nom"/> </td>
+					<td><b><label>Nom*</label></b></td>
+					<td><input name="nom" type="text" placeholder="saisir votre nom"/> </td>
 				
 				</tr>
 				
 				<tr>
 					<br>
-					<td><b><label>Prenom</label></b></td>
-					<td><input type="text" placeholder="saisir votre prenom"/></td>
+					<td><b><label>Prenom*</label></b></td>
+					<td><input name="prenom" type="text" placeholder="saisir votre prenom"/></td>
 					
 				</tr>
 				
@@ -41,33 +46,43 @@
 				<tr>
 					
 					<td><b><label>Numero téléphone</label></b></td>
-					<td><input type="text" placeholder="saisir votre numero"/> </td>
+					<td><input name="tel" type="text" placeholder="saisir votre numero"/> </td>
 					
 				</tr>
 				<tr>
 					
-					<td><b><label>Email</label></b></td>
-					<td><input type="email" placeholder="saisir votre Email"/></td>
+					<td><b><label>Email*</label></b></td>
+					<td><input name="email" type="email" placeholder="saisir votre Email"/></td>
 					
 				</tr>
 				
 				<tr>
 					
-					<td><b><label>Mot de passe</label></b></td>
-					<td><input type="text" placeholder="saisir votre mot de passe"/> </td>
+					<td><b><label>Mot de passe*</label></b></td>
+					<td><input name="password1" type="text" placeholder="saisir votre mot de passe"/> </td>
+					
+				</tr>
+
+				<tr>
+					
+					<td><b><label>Vérification mot de passe*</label></b></td>
+					<td><input name="password2" type="text" placeholder="saisir votre mot de passe une nouvelle fois"/> </td>
 					
 				</tr>
 			
-				<tr>
-					
-					<td colspan="2"><input class=inscription type="submit" value="Envoyer"/> </td>
-				</tr>
+				
+				
+			
+				
+				
 			
 	
 			</table></center>
-	
+			
+			<center><input class=inscription type="submit" value="Envoyer"/></center>
+			<Br/>
 	</div>
-
+</form>
 <Br/>
 <Br/>
 <Br/>

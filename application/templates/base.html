@@ -11,7 +11,7 @@
 <br />
 
 	<div> 
-		<button class="button1"> <a href="/Connexion">Connexion</a> 	
+		{% if user %} BIENVENUE {{ user.pseudo }}<button class="button1"><a href="/logout">Deconnexion</a>{% endif %}	
 	</div>  
 <br />
 <br />
@@ -80,7 +80,7 @@
 <center>  
 <div> 
 
-	<button type="submit" class="unstyled-button"> <a href="RGPD">RGPD</a> </p> </button>
+	<button type="submit" class="unstyled-button"> <a href="/RGPD">RGPD</a> </p> </button>
 	<button type="submit" class="unstyled-button"> <a href="/A_propos_de_AlloBobo">À propos de AlloBobo</a> </p> </button>
 	<button type="submit" class="unstyled-button"> <a href="/professionnels_de_sante">Pour les professionnels de santé</a> </p> </button> 
 	<button type="submit" class="unstyled-button"> <a href="/Condition_utilisation">Condition générale d'utilisation </p> </button>
