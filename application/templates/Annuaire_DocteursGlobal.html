@@ -3,9 +3,9 @@
 
 {% block content %}
 
-Liste des docteurs :
-
-<ul class="list-group t20">
+<center><h1>Liste des docteurs :</h1></center>
+<font size="4">
+<center><ul class="list-group t20">
     {% for docteur in docteurs %} 
     <a href="{{ url_for('infos_Docteur', oid=docteur._id)}}">
         <li class="list-group-item">
@@ -13,6 +13,6 @@ Liste des docteurs :
         </li>
     </a>
     {% endfor %}
-</ul>
-
+</ul></center>
+</font>
 {% endblock %}
