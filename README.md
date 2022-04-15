@@ -5,6 +5,7 @@
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)  [![forthebadge](http://forthebadge.com/images/badges/powered-by-electricity.svg)](http://forthebadge.com)
 
 Cette application à pour but de proposer des traitements alternatifs pour soigner différents maux du quotidien. 
+
 Elle a été développée dans le contexte de la formation 2022 de POEI 16 consultants BI/BigData de l'INTI en l'espace de 8 journées calendaires. 
 
 # Description
