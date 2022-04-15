@@ -5,6 +5,16 @@ from application import db
 from bson.objectid import ObjectId
 import pymongo
 import bcrypt
+from flask_mail import Mail, Message
+
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+app.config['MAIL_USERNAME'] = 'lacoolclass@gmail.com'
+app.config['MAIL_PASSWORD'] = 'intijee-16'
+
+mail = Mail(app)
 
 @app.route("/logout", methods=["POST", "GET"])
 def logout():
@@ -239,3 +249,11 @@ def cdtgeneral():
 def bigdata():
     page = "page_BigData.html"
     return redirect(url_for('redirection', page=page))
+@app.route('/send', methods=['POST', 'GET'])
+def send():
+    msg = Message('Sujet 1',
+        sender = 'mec.cheloudufinfonddelariege@gmail.com',
+        recipients=['lacoolclass@gmail.com'])
+    mail.send(msg)
+
+    return 'Message envoyé'
