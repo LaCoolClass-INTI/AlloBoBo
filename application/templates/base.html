@@ -11,10 +11,12 @@
 <br />
 
 	<div> 
+		{% if user %}
 		<div class="User">
-			{% if user %} BIENVENUE {{ user.pseudo }}
+			 BIENVENUE {{ user.pseudo }}
 		</div>
-		<button class="button1"><a href="/logout">Deconnexion</a>{% endif %}	
+		<button class="button1"><a href="/logout">Deconnexion</a>
+		{% endif %}	
 	</div>  
 <br />
 <br />
@@ -43,13 +45,13 @@
    <!-- button -->
 	<center>
 <div class="block">
-  <button class="button2"> <a href="/">Accueil</a></button>
-  <button class="button2"> <a href="/Qui_sommes_nous">Qui sommes-nous?</a></button>
-	<button class="button2"> <a href="/Nos_solutions">Nos solutions</a>  </button> 	
-	<button class="button2"> <a href="/Nos offres">Nos offres</a>  </button> 
-	<button class="button2"> <a href="/FAQ">F.A.Q</a>  </button> 
-	<button class="button2"> <a href="/Contact">Contact</a>  </button>
-	<button class="button2"> <a href="/annuaire_Docteur">Annuaire</a>  </button>
+  <button class="button2"> <a href="/" class="notUnderlined">Accueil</a></button>
+  <button class="button2"> <a href="/Qui_sommes_nous" class="notUnderlined">Qui sommes-nous?</a></button>
+	<button class="button2"> <a href="/Nos_solutions" class="notUnderlined">Nos solutions</a>  </button> 	
+	<button class="button2"> <a href="/Nos offres" class="notUnderlined">Nos offres</a>  </button> 
+	<button class="button2"> <a href="/FAQ" class="notUnderlined">F.A.Q</a>  </button> 
+	<button class="button2"> <a href="/Contact" class="notUnderlined">Contact</a>  </button>
+	<button class="button2"> <a href="/annuaire_Docteur" class="notUnderlined">Annuaire</a>  </button>
 
 </div>
    </center>  
