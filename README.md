@@ -2,6 +2,8 @@
 
 # Bienvenue sur le projet de création de l'application AlloBobo ! 
 
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)  [![forthebadge](http://forthebadge.com/images/badges/powered-by-electricity.svg)](http://forthebadge.com)
+
 Cette application à pour but de proposer des traitements alternatifs pour soigner différents maux du quotidien. 
 Elle a été développée dans le contexte de la formation 2022 de POEI 16 consultants BI/BigData de l'INTI en l'espace de 8 journées calendaires. 
 
@@ -10,6 +12,14 @@ Elle a été développée dans le contexte de la formation 2022 de POEI 16 consu
 Cette application permet entre autres de rechercher des types de traitement en rentrant un symptôme dans la barre de recherche, de la même facon de rechercher un médecin en rentrant une spécialité. 
 Vous pourrez naviquer entre les différentes pages, vous créer un compte, voir l'adresse et le contact des médecins, la posologie et la durée des traitements. 
 Vous retrouverez également un petit formulaire de contact pour toute question. 
+
+# Installation
+
+Télécharger le dossier application et ouvrez le sur un éditeur de code.
+
+Lancer la commande py run.py dans un terminal d'environnement et vous aurez accès au site en localhost. 
+
+L'application à également été déployée sur : mettre lien
 
 
 # Langages utilisés
