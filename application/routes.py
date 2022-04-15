@@ -270,6 +270,7 @@ def pharmacy():
 
 @app.route('/send', methods=['POST', 'GET'])
 def send():
+    page="Merci.html"
     if request.method == "POST":
         leNom = request.form['nom']
         lemail = request.form['email']
@@ -283,4 +284,4 @@ def send():
         msg.body = message + " . Message de la part de : " + leNom + ", Mail : " + lemail
         mail.send(msg)
 
-    return render_template("Merci.html")
+    return redirect(url_for('redirection', page=page))
